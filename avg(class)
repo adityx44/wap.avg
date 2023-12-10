@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class avg{
+    public:
+    int n,i,a[100],sum=0,av=0;
+    void getdata()
+    {
+        
+        cout<<"Enter total numbers";
+        cin>>n;
+        cout<<"Enter the numbers";
+        for(int i=0;i<n;i++)
+        {
+            cin>>a[i];
+            sum=sum+a[i];
+        }
+    }
+    void avge()
+    {
+        if(n!=0)
+        av=sum/n;
+    
+    }
+    int getavg()
+    {
+        return av;
+    }
+    
+    
+};
+int main()
+{
+    avg obj;
+    obj.getdata();
+    obj.avge();
+    cout<<"Average is "<<obj.getavg();
+    return 0;
+}
